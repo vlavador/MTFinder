@@ -1,0 +1,358 @@
+.CircularProgressbar{
+  width:18%!important
+}
+
+html,body{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+/**MovieDetail css*/
+
+.show_bg_2 {
+ 
+  
+   padding:40px 0px;
+  width: 100%;
+  
+  background-size: cover;
+  }
+
+  .poster{
+    display: block;
+    box-sizing: border-box;
+    width: 300px;
+    height: 450px;
+    position: relative;
+    z-index: 2;
+    border-width: 0px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 0 4px rgba(0,0,0,0.2)
+  }
+.moviedetailscolor{
+  color:#fff
+}
+  .moviedetailtitle{
+    margin: 0;
+    padding: 0;
+    font-size: 2.4em;
+    line-height: 1.1em;
+    font-weight: 700;
+    display: inline-block;
+  }
+
+  .overview-info h3{
+    font-weight: 600;
+    line-height: 1.3em;
+    font-size: 1.3em;
+  }
+.overview-info{
+  margin:30px auto;
+}
+.crewdesign p:first-child{
+  font-weight: 800;
+  margin-bottom:0px;
+}
+.reviewinfo{
+  background-color: #fff;
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-bottom:20px;
+}
+.reviewhead{
+  padding-top: 18px;
+  padding-bottom: 18px;
+  display: flex;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+.reviewcontent{
+  height: 100px;
+    white-space: normal;
+    color: rgb(77, 77, 77);
+    /* font-size: 0.9em; */
+    line-height: 1.2em;
+    /* margin-top: 30px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.reviewauthor{
+  font-size: 1.3em;
+    font-weight: 700;
+}
+
+.castdesign p{
+margin:4px 0px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.castdesign p:first-child{
+  font-weight: 600
+  }
+.castdesign{
+  padding: 0px 5px;
+  
+}
+
+.otherdetails p{
+  overflow: hidden;
+    text-overflow: ellipsis;
+   
+    padding-bottom: 2px;
+    box-sizing: border-box;
+    line-height: 1em;
+    font-weight: 600;
+    margin-bottom: 0px;
+    margin-top: 20px;
+
+}
+
+.movietitle{
+
+    max-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    width: 125px;
+    font-weight: 600;
+    font-size: .9em;
+    margin-top:10px;
+}
+
+.movieoverview{
+  display:block;
+ 
+    height: 70px;
+    word-wrap: break-word; 
+    white-space: normal; 
+    color: #4d4d4d; 
+    font-size: 0.9em; 
+    line-height: 1.2em;
+     margin-top: 10px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-design{
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius:0px;
+  text-decoration: none;
+}
+.footerbg{
+  background-color: #343a40!important;
+  padding:40px 0px;
+}
+.btn-design{
+  font-size: 12px;
+  color: #fff;
+  background-color: #212121;
+  padding: 5px 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  line-height: 28px;
+  transition: ease .3s all;
+  cursor:pointer;
+  border-radius: 5px;
+  margin:0px 5px;
+}
+.header3{
+  font-size: 21px;
+    font-weight: 600;
+}
+.zero-left{
+padding-left:0px;
+}
+.zero-right{
+padding-right:0px;
+}
+
+.pagedesign{
+  font-weight: 600;
+  font-size: 18px;
+}
+.section-nav{
+  background-color: #343a40!important;
+    padding: 10px 0px;
+}
+.movie-home .col-6:nth-child(2){
+  padding-right: 0px;
+}
+.movie-home .col-6:last-child{
+  padding-left: 0px;
+}
+.tv-home .col-6:first-child{
+  padding-right: 0px;
+}
+.tv-home .col-6:nth-child(2){
+  padding-left: 0px;
+}
+.custom-card{
+  border-radius: 0px;
+  border:none;
+}
+.custom-overlay{
+  top:unset
+}
+
+.home-title{
+  font-size: 1.5em;
+  margin: 0 0 4px 0;
+  font-weight: 600;
+}
+
+.homeuptitle{
+  max-height:50px!important;
+  max-width: 90px;
+}
+.margin30{
+  margin-top:30px;
+  margin-bottom:30px;
+}
+
+.margintop30{
+  margin-top:30px;
+
+}
+
+
+.about-details{
+  font-size: 1.5em;
+    
+    font-weight: 600;
+}
+.about-details-content{
+  text-align: justify;
+    font-size: 17px;
+}
+.footer-list{
+  padding: 0px;
+}
+.footer-list li {
+  text-decoration: none;
+  list-style: none;
+  
+}
+
+.footer-list li:hover {
+  text-decoration: none;
+  list-style: none;
+
+}
+.footer-list li a{
+  color:#fff;
+}
+.height400{
+  height: 400px;
+}
+.padding200{
+  padding-top:100px;
+ 
+}
+.genre-design{
+  margin-right: 5px;
+  margin-bottom: 10px;
+  line-height: 24px;
+  font-size: 0.9em;
+  box-sizing: border-box;
+  white-space: nowrap;
+  background-color: #fff;
+    border: 1px solid #d7d7d7;
+    color: #000;
+    padding: 4px 10px;
+    border-radius: 4px;
+    list-style: none;
+    
+
+}
+.ul-genre-design{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding:0px;
+  margin-bottom: 0px;
+}
+.pleft{
+  padding-left:3px;
+}
+
+.card-padding{
+  padding:0px 2px;
+  margin:5px 0px;
+}
+.cast-design{
+  padding:0px 2px;
+  
+}
+.card-padding:hover{
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .card-padding{
+    padding:0px 15px;
+  }
+  .zero-left{
+    padding-left:15px;
+    }
+    .zero-right{
+    padding-right:15px;
+    }
+
+    .poster{
+      width: auto;
+      height: auto;
+    }
+}
+.custom-card-size{
+  width: 8.1rem
+}
+
+@media only screen and (max-width: 1199px) {
+  .custom-card-size{
+    width: 6.95rem
+  }
+  .homeuptitle{
+      max-width: none!important;
+      word-wrap: break-word;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .custom-card-size{
+      width:auto
+    }
+    .movietitle{
+      width:150px;
+    }
+    .movieoverview{
+      height: 68px;
+    }
+    .homeuptitle{
+      max-width: 125px!important;
+      
+    }
+    .moviedetailtitle{
+      font-size: 1.7rem;
+      margin-top:20px;
+    }
+    }
+
+@media only screen and (max-width: 767px) {
+.poster{
+ text-align: center;
+ box-shadow:none;
+}
+}
+
+@media only screen and (max-width: 576px) {
+.cast-design{
+  padding: 0 15px;
+}
+}

@@ -1,0 +1,121 @@
+import React, { Component,Fragment } from 'react'
+
+import {connect} from 'react-redux'
+import {getNowPlayingMovies,getOtherMovies} from '../../store/actions/nowPlayingAction'
+import {Row,Container,Col} from 'react-bootstrap'
+import NowPlayingList from './NowPlayingList'
+import Loader from 'react-loader-spinner'
+
+ class NowPlaying extends Component {
+    state = {
+        activePage:1
+    }
+    componentWillMount(){
+ window.scrollTo(0,0)
+    }
+   componentDidMount(){
+       this.props.getNowPlayingMovie();
+   }
+   previousPage = () =>{
+    this.props.clearmovie()
+       this.props.getOtherMovies(this.state.activePage-1)
+       let newPage = this.state.activePage-1
+       this.setState({
+           activePage:newPage
+       })
+   }
+  nextPage = () =>{
+    this.props.clearmovie()
+
+      this.props.getOtherMovies(this.state.activePage+1)
+      let newPage = this.state.activePage +1
+      this.setState({
+          activePage:newPage
+      })
+      window.scrollTo(0,0);
+  }
+   render() {
+       let movienowplayinginfo = (
+           <Container style={{ 'marginTop': '20px' }}> 
+               <Row>
+                   <Col xs={6} className="zero-left">
+                   <h3 className="header3">Now Playing Movies</h3>
+                   </Col>
+                   <Col xs={6} className="text-right">
+                  <span className="pagedesign">Page:</span> <span>{this.state.activePage}/{this.props.totalpage}</span>
+                   </Col>
+
+               </Row>
+           </Container> 
+       )
+       let nowplayinglist = this.props.nowplayingmovies.length === 0 ? (
+           <Container className="height400">
+                <Row>
+                    <Col xs="12 text-center padding200">
+
+                       <Loader
+         type="Oval"
+         color="#343a40"
+         height={100}
+         width={100}
+      />
+                    </Col> 
+                </Row>
+            </Container>
+       
+      ):(
+                      <Container >  
+                   <Row  >
+                       <NowPlayingList nowplayingMovies={this.props.nowplayingmovies} />
+                   </Row>
+                   { this.props.totalpage === null ? (null):(
+                       <Row style={{marginBottom:'20px'}}>
+                           <Col xs={12} className="text-right">
+                       {
+                           this.state.activePage === 1? (null):
+                       (
+                       <span onClick={this.previousPage} className="btn-design">Previous</span>
+                       )
+                       
+
+                       }
+                        
+                           {
+                               this.state.activePage === this.props.totalpage ? (null):
+                               (
+                                   <span onClick={this.nextPage} className="btn-design">Next</span>
+                               )
+
+                           }
+                           </Col>
+                     </Row>  
+               )
+           }
+               </Container>
+                   )
+       
+        return (
+           <Fragment>
+                {movienowplayinginfo}
+                {nowplayinglist}
+       
+           </Fragment>
+        )
+    }
+}
+const mapStateToProps = (state) =>{
+    return{
+        nowplayingmovies:state.nowplayingMovie.nowplayingMovie,
+        totalpage:state.nowplayingMovie.totalpages
+
+    }
+}
+const mapDispatchToProps = (dispatch) =>{
+return{
+    getNowPlayingMovie: () => { dispatch(getNowPlayingMovies())},
+    getOtherMovies: (page) => {dispatch(getOtherMovies(page))},
+    clearmovie: () => { dispatch({type:'CLEAR_MOVIE',payload:[]})}
+}
+}
+
+export default connect (mapStateToProps,mapDispatchToProps)(NowPlaying)
